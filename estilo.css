@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:wght@100;200;300;400;600;800&display=swap');
+
+/* COLORES */
+:root {
+    --primary: #6955B6;
+    --complementary: #FFCA61;
+    --black__1: #0C0C0C;
+    --white__1: #D9D9D9;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    /* Me permite deslizarme cuando hago click en los links del menu */
+    scroll-behavior: smooth;
+
+}
+
+/* MENU */
+.contenedor-header {
+    background: var(--black__1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+
+}
+
+.contenedor-header header .logo a {
+    font-family: 'Bakbak One';
+    font-size: 36px;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.contenedor-header header ul {
+    display: flex;
+    list-style: none;
+
+}
+
+.contenedor-header header nav ul li a {
+    text-align: none;
+    color: var(--white__1);
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.contenedor-header header nav ul li a:hover {
+    color: var(--primary);
+}
+
+.nav-responsive {
+    background-color: var(--primary);
+    color: var(--white__1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
