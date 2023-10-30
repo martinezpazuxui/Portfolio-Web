@@ -95,9 +95,10 @@ html {
     max-width: 350px;
     margin: 160px auto auto auto;
     text-align: center;
-    border-radius: 40px;    
+    border-radius: 40px;
     align-items: center;
     border: 8px solid #0f0f0f;
+    z-index: 90;
 }
 
 .inicio .contenido-banner img {
@@ -138,6 +139,294 @@ html {
     background-color: var(--primary);
 }
 
+/* S E C C I Ó N  P O R T F O L I O */
+.portfolio {
+    background-color: var(--grey__1);
+    color: var(--white__1);
+    padding: 50px 20px;
+}
+
+.portfolio .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.portfolio h2 {
+    font-size: 48px;
+    font-family: 'Bakbak One';
+    text-align: start;
+    padding: 20px 0;
+}
+
+.portfolio .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio .galeria .proyecto {
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.portfolio .galeria .proyecto img {
+    width: 100%;
+    display: block;
+}
+
+.portfolio .galeria .proyecto .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(105, 85, 182, .8), rgba(105, 85, 182, .5));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+
+.portfolio .galeria .proyecto .overlay h3 {
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+.portfolio .galeria .proyecto .overlay:hover {
+    opacity: 1;
+}
+
+.portfolio .galeria .proyecto .overlay:hover h3 {
+    margin-bottom: 0px;
+}
+
+/* S E C C I O N  S K I L L S*/
+.skills {
+    background-color: var(--grey__1);
+    color: var(--white__1);
+    padding: 50px 20px;
+}
+
+.skills .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skills h2 {
+    font-size: 48px;
+    font-family: 'Bakbak One';
+    text-align: start;
+    padding: 20px 0;
+}
+
+.skills .fila {
+    display: flex;
+}
+
+.skills .fila .col {
+    width: 50%;
+    padding: 0;
+}
+
+.skills .fila .col h3 {
+    font-size: 28px;
+    font-family: 'Bakbak One';
+    margin-bottom: 25px;
+}
+
+.skills .skill>span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.skills .skill .barra-skill {
+    height: 8px;
+    width: 80%;
+    background-color: var(--black__1);
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.skills .skill .progreso {
+    background-color: var(--primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+
+.skills .skill .barra-skill span {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: var(--primary);
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+
+/* H A R D   S K I L L S */
+.skills .skill .figma {
+    width: 0%;
+    animation: 2s figma forwards;
+}
+
+@keyframes figma {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.skills .skill .illustrator {
+    width: 0%;
+    animation: 2s illustrator forwards;
+}
+
+@keyframes illustrator {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+.skills .skill .photoshop {
+    width: 0%;
+    animation: 2s photoshop forwards;
+}
+
+@keyframes photoshop {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+.skills .skill .htmlcss {
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+
+@keyframes htmlcss {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+.skills .skill .javascript {
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+
+@keyframes javascript {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+/* S O F T   S K I L L S */
+.skills .skill .creatividad {
+    width: 0%;
+    animation: 2s creatividad forwards;
+}
+
+@keyframes creatividad {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.skills .skill .pensamiento-critico {
+    width: 0%;
+    animation: 2s pensamiento-critico forwards;
+}
+
+@keyframes pensamiento-critico {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.skills .skill .adaptabilidad {
+    width: 0%;
+    animation: 2s adaptabilidad forwards;
+}
+
+@keyframes adaptabilidad {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+.skills .skill .trabajo-equipo {
+    width: 0%;
+    animation: 2s trabajo-equipo forwards;
+}
+
+@keyframes trabajo-equipo {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+.skills .skill .comunicacion {
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+
+@keyframes comunicacion {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
 /* S O B R E  M I */
 .sobremi {
     background-color: var(--black__1);
@@ -158,12 +447,14 @@ html {
 }
 
 .sobremi .contenido-seccion p {
-    font: 18px;
+    font-size: 14px;
     line-height: 22px;
     margin-bottom: 20px;
+    width: 40%;
 }
 
 .sobremi .contenido-seccion p span {
+    font-size: 14px;
     color: #FFCA61;
     font-weight: bold;
 }
@@ -206,11 +497,12 @@ html {
 .sobremi .fila .col .contenedor-intereses {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
 .sobremi .fila .col .contenedor-intereses .interes {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background-color: var(--grey__1);
     border-radius: 10px;
     margin: 0 15px 15px 0;
@@ -260,164 +552,281 @@ html {
 
 }
 
-/* S E C C I O N  S K I L L S*/
-.skills {
-    background-color: var(--grey__1);
+/* S E C C I O N  C U R R I C U L U M */
+.curriculum {
+    background-color: var(--black__1);
     color: var(--white__1);
     padding: 50px 20px;
 }
 
-.skills .contenido-seccion {
+.curriculum .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
 
-.skills h2 {
+.curriculum h2 {
     font-size: 48px;
     font-family: 'Bakbak One';
     text-align: start;
     padding: 20px 0;
 }
 
-.skills .fila {
+.curriculum .fila {
     display: flex;
+    justify-content: space-between;
 }
 
-.skills .fila .col {
-    width: 50%;
-    padding: 0;
+.curriculum .fila .col {
+    width: 49%;
+    padding: 0px 20px;
 }
 
-.skills .fila .col h3 {
+.curriculum .fila .col h3 {
     font-size: 28px;
     font-family: 'Bakbak One';
     margin-bottom: 25px;
 }
 
-.skills .skill > span {
-    font-weight: bold;
-    display: block;
+.curriculum .fila .izquierda {
+    border-right: 2px solid #252A2E;
+}
+
+.curriculum .fila .derecha {
+    border-left: 2px solid #252A2E;
+}
+
+.curriculum .fila .item {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #252A2E;
+    position: relative;
+}
+
+.curriculum .fila .item h4 {
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
-.skills .skill .barra-skill {
-    height: 8px;
-    width: 80%;
-    background-color: var(--black__1);
-    position: relative;
-    margin-bottom: 30px;
+.curriculum .fila .item .casa {
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
 }
 
-.skills .skill .progreso {
+.curriculum .fila .item .flecha {
+    display: block;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.curriculum .fila .item p {
+    line-height: 24px;
+}
+
+.curriculum .fila .izq {
+    border-right: 2px solid var(--primary);
+    margin-right: 20px;
+}
+
+.curriculum .fila .der {
+    border-left: 2px solid var(--primary);
+    margin-left: 20px;
+}
+
+.curriculum .fila .item .conectori {
+    height: 2px;
     background-color: var(--primary);
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    z-index: 5;
+}
+
+.curriculum .fila .item .conectori .circuloi {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+
+.curriculum .fila .item .conectord {
+    height: 2px;
+    background-color: var(--primary);
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+    z-index: 5;
+}
+
+.curriculum .fila .item .conectord .circulod {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+
+/* SECCIÓN CONTACTO */
+.contacto {
+    background-image: url(#);
+    background-color: var(--black__1);
+    color: var(--white__1);
+    padding: 50px 0px;
+}
+
+.contacto .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contacto h2 {
+    font-size: 48px;
+    font-family: 'Bakbak One';
+    text-align: start;
+    padding: 20px 0;
+}
+
+.contacto .fila {
+    display: flex;
+}
+
+.contacto .col {
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+
+.contacto .col input,
+.contacto .col textarea {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252A2E;
+    columns: var(--white__1);
+    font-size: 18px;
+}
+
+.contacto button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--white__1);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: var(--white__1);
+    position: relative;
+    z-index: 10;
+}
+
+.contacto button .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    height: 8px;
-}
-
-.skills .skill .barra-skill span {
-    position: absolute;
-    height: 40px;
-    width: 40px;
+    width: 0;
+    height: 100%;
     background-color: var(--primary);
-    border-radius: 50px;
-    line-height: 40px;
+    z-index: -1;
+    transition: 1s;
+}
+
+.contacto button:hover .overlay {
+    width: 100%;
+}
+
+.contacto .col img {
+    width: 100%;
+}
+
+.contacto .col .info {
+    position: absolute;
+    top: 40%;
+    background-color: #252A2E;
+    padding: 20px;
+    max-width: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contacto .col .info ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.contacto .col .info ul li {
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.contacto .col .info ul li i {
+    color: var(--primary);
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer {
+    background-color: var(--primary__dark);
+    color: var(--white__1);
+    padding: 50px 0 30px 0;
     text-align: center;
-    top: -17px;
-    right: -15px;
-    font-size: 14px;
+    position: relative;
+    width: 100%;
 }
 
-/* H A R D   S K I L L S */
-.skills .skill .figma {
-    width: 0%;
-    animation: 2s figma forwards;
-}
-@keyframes figma {
-    0%{width: 0%;}
-    100%{width: 90%;}
+footer .redes {
+    margin-bottom: 20px;
 }
 
-.skills .skill .illustrator {
-    width: 0%;
-    animation: 2s illustrator forwards;
-}
-@keyframes illustrator {
-    0%{width: 0%;}
-    100%{width: 85%;}
-}
-
-.skills .skill .photoshop {
-    width: 0%;
-    animation: 2s photoshop forwards;
-}
-@keyframes photoshop {
-    0%{width: 0%;}
-    100%{width: 70%;}
+footer .redes a {
+    color: var(--white__1);
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid var(--white__1);
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
 }
 
-.skills .skill .htmlcss {
-    width: 0%;
-    animation: 2s htmlcss forwards;
-}
-@keyframes htmlcss {
-    0%{width: 0%;}
-    100%{width: 75%;}
-}
-
-.skills .skill .javascript {
-    width: 0%;
-    animation: 2s javascript forwards;
-}
-@keyframes javascript {
-    0%{width: 0%;}
-    100%{width: 50%;}
+footer .arriba {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    color: var(--white__1);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
 }
 
-/* S O F T   S K I L L S */
-.skills .skill .creatividad {
-    width: 0%;
-    animation: 2s creatividad forwards;
-}
-@keyframes creatividad {
-    0%{width: 0%;}
-    100%{width: 95%;}
+footer .redes a:hover {
+    background-color: var(--primary);
 }
 
-.skills .skill .pensamiento-critico {
-    width: 0%;
-    animation: 2s pensamiento-critico forwards;
+/* SECCIÓN RESPONSIVE */
+@media screen and (max-width:980px) {
+    nav {
+        display: none;
+    }
 }
-@keyframes pensamiento-critico {
-    0%{width: 0%;}
-    100%{width: 90%;}
-}
-
-.skills .skill .adaptabilidad {
-    width: 0%;
-    animation: 2s adaptabilidad  forwards;
-}
-@keyframes adaptabilidad {
-    0%{width: 0%;}
-    100%{width: 75%;}
-}
-
-.skills .skill .trabajo-equipo {
-    width: 0%;
-    animation: 2s trabajo-equipo forwards;
-}
-@keyframes trabajo-equipo {
-    0%{width: 0%;}
-    100%{width: 75%;}
-}
-
-.skills .skill .comunicacion {
-    width: 0%;
-    animation: 2s comunicacion forwards;
-}
-@keyframes comunicacion {
-    0%{width: 0%;}
-    100%{width: 70%;}
-}
-
