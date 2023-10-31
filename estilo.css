@@ -98,7 +98,6 @@ html {
     border-radius: 40px;
     align-items: center;
     border: 8px solid #0f0f0f;
-    z-index: 90;
 }
 
 .inicio .contenido-banner img {
@@ -824,9 +823,122 @@ footer .redes a:hover {
     background-color: var(--primary);
 }
 
-/* SECCIÓN RESPONSIVE */
+/* S E C C I Ó N   R E S P O N S I V E */
 @media screen and (max-width:980px) {
     nav {
         display: none;
+    }
+
+    .nav-responsive {
+        display: block;
+    }
+
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+    }
+
+    nav.responsive ul {
+        display: block !important;
+    }
+
+    nav.responsive ul li {
+        border-bottom: 1px solid var(--white__1);
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .sobremi .contenido-seccion p {
+        text-align: center;
+        width: fit-content;
+    }
+
+    .sobremi .fila {
+        display: block;
+    }
+
+    .sobremi .fila .col {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sobremi .fila .col h3 {
+        text-align: center;
+    }
+
+    .sobremi .fila .col ul {
+        display: none;
+    }
+
+    .sobremi .fila .col ul li {
+        flex-direction: column;
+    }
+
+    .sobremi .fila .col .contenedor-intereses {
+        justify-content: center;
+    }
+
+    .sobremi h2 {
+        text-align: center;
+    }
+
+    h3.none {
+        display: none;
+    }
+
+    .skills .fila {
+        display: block;
+    }
+
+    .skills .fila .col {
+        width: 100%;
+    }
+
+    .skills .fila .col .barra-skill {
+        width: 100%;
+    }
+
+    .curriculum .fila {
+        display: block;
+    }
+
+    .curriculum .fila .col {
+        width: 90%;
+    }
+
+    .curriculum .fila .derecha {
+        margin-left: 20px;
+    }
+
+    .portfolio h2 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .portfolio .galeria {
+        display: block;
+        width: 100%;
+    }
+
+    .portfolio .galeria .proyecto {
+        max-width: 100%;
+    }
+
+    .portfolio .galeria .proyecto img {
+        width: 100%;
+    }
+
+    .contacto .fila {
+        display: block;
+    }
+
+    .contacto .fila .col {
+        width: 100%;
     }
 }
