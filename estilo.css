@@ -691,8 +691,8 @@ html {
 .contacto h2 {
     font-size: 48px;
     font-family: 'Bakbak One';
-    text-align: start;
     padding: 20px 0;
+    text-align: center;
 }
 
 .contacto .fila {
