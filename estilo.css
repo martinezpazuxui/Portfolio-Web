@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:wght@100;200;300;400;600;800&display=swap');
 
+/* T I P O G R A F Í A S */
+@font-face {
+    font-family: "Akira";
+    src: url("fonts/Akira\ Expanded\ Demo.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* C O L O R E S */
 :root {
     --primary: #6955B6;
-    --complementary: #FFCA61;
-    --primary__dark: #28223F;
+    --primary__dark: #0d0c11;
+    --secondary: #30255b;
+    --complementary: #ffd786;
+    --complementary_light: #ffe5b0;
     --black__1: #0C0C0C;
     --white__1: #D9D9D9;
     --grey__1: #282828;
@@ -21,7 +31,6 @@
 html {
     /* Me permite deslizarme cuando hago click en los links del menu */
     scroll-behavior: smooth;
-
 }
 
 /* M E N U */
@@ -64,10 +73,12 @@ html {
     padding: 3px;
     transition: .5s;
     text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .contenedor-header header nav ul li a:hover {
-    color: var(--primary);
+    color: var(--complementary);
 }
 
 .nav-responsive {
@@ -81,7 +92,7 @@ html {
 
 /* S E C C I Ó N   I N I C I O */
 .inicio {
-    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)), url(img/09_About-me/fondo.png);
+    background: linear-gradient(to top, rgba(37, 30, 65, 0.8), rgb(19, 17, 26)), url(img/09_About-me/fondo.png);
     background-size: cover;
     height: 124vh;
     color: var(--white__1);
@@ -112,7 +123,7 @@ html {
 .inicio .contenido-banner h1 {
     margin-top: 40px;
     font-size: 28px;
-    font-family: 'Bakbak One';
+    font-family: 'Poppins';
 }
 
 .inicio .contenido-banner h2 {
@@ -135,12 +146,18 @@ html {
 }
 
 .inicio .contenido-banner .redes a:hover {
+    background-color: var(--secondary);
+}
+
+.inicio .contenido-banner .redes a:active {
+    scale: 1.2;
+    transition: background-color 0.3s ease, color 0.3s ease;
     background-color: var(--primary);
 }
 
 /* S E C C I Ó N  P O R T F O L I O */
 .portfolio {
-    background-color: var(--grey__1);
+    background-color: var(--primary__dark);
     color: var(--white__1);
     padding: 50px 20px;
 }
@@ -151,10 +168,13 @@ html {
 }
 
 .portfolio h2 {
-    font-size: 48px;
-    font-family: 'Bakbak One';
-    text-align: start;
-    padding: 20px 0;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-family: "Akira";
+    text-align: center;
+    padding: 12px 0 12px 0px;
+    background-color: var(--secondary);
+    margin: 20px 0px 60px 0px;
 }
 
 .portfolio .galeria {
@@ -182,7 +202,7 @@ html {
     width: 100%;
     height: 100%;
     text-align: center;
-    background: linear-gradient(rgba(105, 85, 182, .8), rgba(105, 85, 182, .5));
+    background: linear-gradient(rgba(64, 52, 111, 0.8), rgba(74, 60, 129, 0.5));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -207,7 +227,7 @@ html {
 
 /* S E C C I O N  S K I L L S*/
 .skills {
-    background-color: var(--grey__1);
+    background: linear-gradient(to top, rgba(37, 30, 65, 0.8), rgb(19, 17, 26)), url(img/09_About-me/fondo.png);
     color: var(--white__1);
     padding: 50px 20px;
 }
@@ -218,10 +238,13 @@ html {
 }
 
 .skills h2 {
-    font-size: 48px;
-    font-family: 'Bakbak One';
-    text-align: start;
-    padding: 20px 0;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-family: "Akira";
+    text-align: center;
+    padding: 12px 0 12px 0px;
+    background-color: var(--primary__dark);
+    margin: 20px 0px 60px 0px;
 }
 
 .skills .fila {
@@ -235,7 +258,7 @@ html {
 
 .skills .fila .col h3 {
     font-size: 28px;
-    font-family: 'Bakbak One';
+    font-family: 'Poppins';
     margin-bottom: 25px;
 }
 
@@ -243,6 +266,7 @@ html {
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
+    color: var(--complementary);
 }
 
 .skills .skill .barra-skill {
@@ -265,7 +289,7 @@ html {
     position: absolute;
     height: 40px;
     width: 40px;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     border-radius: 50px;
     line-height: 40px;
     text-align: center;
@@ -428,7 +452,7 @@ html {
 
 /* S O B R E  M I */
 .sobremi {
-    background-color: var(--black__1);
+    background-color: var(--primary__dark);
     color: var(--white__1);
     padding: 50px 20px;
 }
@@ -439,22 +463,25 @@ html {
 }
 
 .sobremi h2 {
-    font-size: 48px;
-    font-family: 'Bakbak One';
-    text-align: start;
-    padding: 20px 0;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-family: "Akira";
+    text-align: center;
+    padding: 12px 0 12px 0px;
+    background-color: var(--secondary);
+    margin: 20px 0px 60px 0px;
 }
 
 .sobremi .contenido-seccion p {
     font-size: 14px;
     line-height: 22px;
-    margin-bottom: 20px;
-    width: 40%;
+    margin-bottom: 80px;
+    width: 100%;
 }
 
 .sobremi .contenido-seccion p span {
     font-size: 14px;
-    color: #FFCA61;
+    color: var(--complementary);
     font-weight: bold;
 }
 
@@ -468,7 +495,7 @@ html {
 
 .sobremi .fila .col h3 {
     font-size: 28px;
-    font-family: 'Bakbak One';
+    font-family: 'Poppins';
     margin-bottom: 25px;
 }
 
@@ -487,7 +514,7 @@ html {
 }
 
 .sobremi .fila .col ul li span {
-    background-color: var(--primary);
+    background-color: var(--secondary);
     padding: 3px;
     font-weight: bold;
     border-radius: 5px;
@@ -518,8 +545,12 @@ html {
 }
 
 .sobremi .fila .col .contenedor-intereses .intereses i {
-    font-size: 30px;
     margin-bottom: 10px;
+}
+
+div .col .contenedor-intereses .fa-solid,
+.fas {
+    font-size: 28px;
 }
 
 .sobremi button {
@@ -553,7 +584,8 @@ html {
 
 /* S E C C I O N  C U R R I C U L U M */
 .curriculum {
-    background-color: var(--black__1);
+    background: linear-gradient(to top, rgba(37, 30, 65, 0.8), rgb(19, 17, 26)), url(img/09_About-me/fondo.png);
+    background-size: cover;
     color: var(--white__1);
     padding: 50px 20px;
 }
@@ -564,10 +596,12 @@ html {
 }
 
 .curriculum h2 {
-    font-size: 48px;
-    font-family: 'Bakbak One';
-    text-align: start;
-    padding: 20px 0;
+    font-size: 24px;
+    font-family: "Akira";
+    text-align: center;
+    padding: 12px 0 12px 0px;
+    background-color: var(--black__1);
+    margin: 20px 0px 60px 0px;
 }
 
 .curriculum .fila {
@@ -582,7 +616,7 @@ html {
 
 .curriculum .fila .col h3 {
     font-size: 28px;
-    font-family: 'Bakbak One';
+    font-family: 'Poppins';
     margin-bottom: 25px;
 }
 
@@ -689,10 +723,12 @@ html {
 }
 
 .contacto h2 {
-    font-size: 48px;
-    font-family: 'Bakbak One';
-    padding: 20px 0;
+    font-size: 24px;
+    font-family: "Akira";
     text-align: center;
+    padding: 12px 0 12px 0px;
+    background-color: var(--secondary);
+    margin: 20px 0px 60px 0px;
 }
 
 .contacto .fila {
@@ -820,7 +856,7 @@ footer .arriba {
 }
 
 footer .redes a:hover {
-    background-color: var(--primary);
+    background-color: var(--secondary);
 }
 
 /* S E C C I Ó N   R E S P O N S I V E */
